@@ -15,15 +15,13 @@ public class Ota {
     }
 
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {
-        String codigoProveedor = distribuidorDeTrafico.proveedor();
-        // TODO Implementar
-        return Collections.emptyList();
+        Aerolinea proveedores = distribuidorDeTrafico.aerolinea();
+        return proveedores.buscarVuelos(fecha, origen, destino);
     }
 
     public Boleto reservar(Vuelo vuelo, Set<Pasajero> pasajeros) {
-        String codigoProveedor = distribuidorDeTrafico.proveedor();
-        // TODO Implementar
-        return null;
+        Aerolinea proveedores = distribuidorDeTrafico.aerolinea();
+        return proveedores.reservar(vuelo, pasajeros);
     }
 
 

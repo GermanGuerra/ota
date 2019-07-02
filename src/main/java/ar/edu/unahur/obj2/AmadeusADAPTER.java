@@ -9,6 +9,10 @@ import java.util.Set;
 public class AmadeusADAPTER implements Aerolinea {
     public Amadeus amadeus;
 
+    public AmadeusADAPTER(Amadeus amadeus) {
+        this.amadeus = amadeus;
+    }
+
     @Override
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {
         return amadeus.executeSearch(fecha,origen,destino);

@@ -9,6 +9,10 @@ import java.util.Set;
 public class SabreADAPTER implements Aerolinea {
     public Sabre sabre;
 
+    public SabreADAPTER(Sabre sabre) {
+        this.sabre = sabre;
+    }
+
     @Override
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {
         return sabre.buscar(fecha,origen,destino);

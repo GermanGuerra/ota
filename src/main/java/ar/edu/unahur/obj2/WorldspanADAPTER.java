@@ -13,11 +13,15 @@ public class WorldspanADAPTER implements Aerolinea {
 
     public Worldspan worldspan;
 
-/*
-    private int dia;
-    private int mes;
-    private int año;
-*/
+    public WorldspanADAPTER(Worldspan worldspan) {
+        this.worldspan = worldspan;
+    }
+
+    /*
+        private int dia;
+        private int mes;
+        private int año;
+    */
     @Override
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {
 
